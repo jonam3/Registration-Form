@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> REGISTRATION FORM</title>
+    <style>
+        table {
+            border-style: inset solid black;
+            border: 1px solid white;
+            box-shadow: 10px 20px 18px 10px black;
+            border-spacing: 15px;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        body {
+            background-image: url('https://w0.peakpx.com/wallpaper/465/678/HD-wallpaper-blue-abstract-background-blue-creative-background-neon-lines-background-neon-blue-light.jpg');
+            background-size: cover;
+        }
+
+        table {
+            width: 35%;
+        }
+
+        td {
+            width: 10%;
+            padding-bottom: 0%;
+            height: auto;
+        }
+
+        th {
+            color: white;
+            width: 30%;
+        }
+
+        #nameerror,
+        #iderror,
+        #doberror,
+        #emailerror,
+        #contacterror,
+        #bgerror,
+        #addresserror {
+            color: red;
+            font-size: 15px;
+            padding: 0px;
+        }
+
+        #input {
+            padding: 25px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="Registration Form 2.html" onsubmit=" return validation()">
+        <h2 style="text-align:center;text-transform: uppercase;">Registration Form</h2>
+        <table style align="center">
+            <tr colspan="15">
+                <th rowspan="2"><label for="name">Name:</label></th>
+                <td colspan="10" rowspan="1"><input type="text" id="name" placeholder="Name ex:John K" value=""
+                        oninput="return nameCheck()"></td>
+            <tr>
+                <td id="nameerror"></td>
+            </tr>
+            <tr>
+                <th rowspan="2"><label for="id">Id:</label></th>
+                <td><input type="text" style="width:168px;" id="id" placeholder="Id ex:ae-123" value="" size="4"
+                        oninput="return idCheck()"><br>
+                <td></td>
+                </td>
+            </tr>
+            <tr>
+                <td id="iderror"></td>
+            </tr>
+            </tr>
+            <tr>
+                <th rowspan="2"><label for="dob">DOB:</label></th>
+                <td><input type="date" id="dob" placeholder="Dob" value="" min="01-01-1970" max="02-02-2023"
+                        oninput="return dobCheck()"></td>
+            </tr>
+            <tr>
+                <td id="doberror"></td>
+            </tr>
+            </tr>
+            <tr>
+                <th rowspan="2"><label for="email">Email:</label></th>
+                <td><input type="email" id="email" placeholder="Email ex:xyz@gmail.com" value=""
+                        oninput="return emailCheck()"></td>
+            </tr>
+            <tr>
+                <td id="emailerror"></td>
+            </tr>
+            </tr>
+            <tr>
+                <th>
+                    <p>Gender:</p>
+                </th>
+                <td style="padding: bottom;"><input type="radio" id="male" name="gender" value="male"
+                        oninput=" return genderv()">
+                    <label style="color: white;" for="male"> Male</label>
+                    <input type="radio" id="female" name="gender" value="female" oninput=" return genderv()">
+                    <label style="color: white;" for="female">FeMale</label>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td id="gendererror" style="font-size: medium;color: red;"></td>
+            </tr>
+
+
+            <tr>
+                <th rowspan="2"><label for="contact">Contact:</label></th>
+                <td><input type="tel" style="width:168px;" id="contact" name="contact"
+                        placeholder="Contact ex:9432112xxx" value="" size="10" oninput="return contactCheck()"></td>
+            </tr>
+            <tr>
+                <td id="contacterror"></td>
+            </tr>
+            </tr>
+            <tr>
+                <th rowspan="2"><label for="bg">Blood Group:</label></th>
+                <td><input type="text" id="bg" name="blood group" placeholder="Blood Group ex:O -" value=""
+                        oninput="return bgCheck()"></td>
+            </tr>
+            <tr>
+                <td id="bgerror"></td>
+            </tr>
+            </tr>
+            <tr>
+                <th><label for="address">Address:</label></th>
+                <td><textarea cols="21" rows="3" type="address" id="address" placeholder="Address"
+                        oninput="return addressCheck()"></textarea></td>
+            </tr>
+            <th>
+            <td id="addresserror"></td>
+            </th>
+            </tr>
+            <tr>
+                <th>
+                    <p>Language known:</p>
+                </th>
+                <td><input type="checkbox" id="html" name="Language" value="html" oninput="return languagess()">
+                    <label style="color: white;" for="html">HTML</label><br>
+                    <input type="checkbox" id="css" name="Language" value="css" oninput="return languagess()">
+                    <label style="color: white;" for="css">CSS</label><br>
+                    <input type="checkbox" id="javascript" name="Language" value="javascript" oninput="return languagess()">
+                    <label style="color: white;" for="javascript">JAVASCRIPT</label><br>
+                    <input type="checkbox" id="nodejs" name="Language" value="nodejs" oninput="return languagess()">
+                    <label style="color: white;" for="nodejs">NODEJS</label>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td id="langerror" style="color: red;"></td>
+            </tr>
+            <tr style="height: 100px;">
+                <th colspan="3"><input style="width: 90%;height: 7%" type="submit" value="SUBMIT"></th>
+            </tr>
+            <script src="Registration Form1.js"></script>
+        </table>
+    </form>
+
+</body>
+
+</html>
